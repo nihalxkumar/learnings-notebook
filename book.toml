@@ -4,3 +4,18 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Learnings"
+description = "This is to document my progress and to share my learnings with others who may find them helpful."
+
+
+[output.html]
+mathjax-support = true
+repository = "https://github.com/nihalxkumar/learnings-notebook"
+
+[output.html.search]
+limit-results = 20
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+boost-paragraph = 1
+expand = true
+heading-split-level = 2
