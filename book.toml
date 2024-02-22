@@ -1,0 +1,6 @@
+[book]
+authors = ["nihalxkumar"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Learnings"
