@@ -11,6 +11,7 @@ description = "This is to document my progress and to share my learnings with ot
 mathjax-support = true
 git-repository-url = "https://github.com/nihalxkumar/learnings-notebook"
 git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/nihalxkumar/learnings-notebook/edit/main/{path}"
 
 [output.html.search]
 limit-results = 20
