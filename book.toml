@@ -8,12 +8,17 @@ description = "This is to document my progress and to share my learnings with ot
 
 
 [output.html]
+default-theme = "rust"
+preferred-dark-theme = "ayu"
+curly-quotes = true
 mathjax-support = true
 git-repository-url = "https://github.com/nihalxkumar/learnings-notebook"
 git-repository-icon = "fa-github"
 edit-url-template = "https://github.com/nihalxkumar/learnings-notebook/edit/main/{path}"
 
 [output.html.search]
+enable = true
+teaser-word-count = 15
 limit-results = 20
 use-boolean-and = true
 boost-title = 2
@@ -21,3 +26,22 @@ boost-hierarchy = 2
 boost-paragraph = 1
 expand = true
 heading-split-level = 2
+copy-js = true
+
+[output.html.print]
+enable = true
+page-break = true
+
+[output.html.fold]
+enable = true
+level = 0
+
+[output.html.playground]
+editable = true
+copyable = true
+copy-js = true
+line-numbers = true
+runnable = true
+
+[preprocessor.katex]
+after = ["links"]
