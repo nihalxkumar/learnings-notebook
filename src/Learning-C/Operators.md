@@ -129,6 +129,63 @@ d = c + a > b;
  - Any non-zero value in case of C is considered as True
  - Order of precedence NOT -> AND -> OR
 5. Increment
+   * Pre `++x` first increment then assign. 
+   * Post `x++` first assign then increment. 
+       
+   Pre and post work same if you are using it as a single statement. But if you are using it as a part of a bigger expression then it will make a difference.
+   
+   Example 1:
+   
+      ```C
+          int a = 5, b;
+          b = a++ + a++;
+          printf("%d %d", a, b);
+          // 7 10
+    ```
+   
+   
+   Example 2:
+   
+   ```C
+      int a = 5, b;
+       b = ++a + ++a;
+       printf("%d %d", a, b);
+       // 7 13
+ ```
+      
+   
+#### Explanation
+   
+   1. We declare two integer variables a and b. Initially, a is assigned the value of 5, while we haven't yet set any initial value for b.
+   
+   2. The line b = a++ + a++; performs several operations at once. Firstly, it adds the current values of a (which is still 5) with itself (again, currently 5). This results in 10. Secondly, after adding these values together, it increments a twice – first from its original value of 5 to 6, then again to 7.
+   
+   3. Note that ++ before a variable means incrementing it by one immediately after the operation. So when used within an expression like here, it will be applied only once, not twice as you might expect based on the order of appearance.
+   
+   Use pen and paper. make a table of values of a and b at each step.
+   
+   | x     | y  |
+   |-------|----|
+   | ~~5~~ | 10 |
+   | ~~6~~ |    |
+   | 7     |    |
+   
+
+Example 3:
+
+   ```C
+    x = 1;
+    y = x++ * ++x * x++ * ++x * x++ * x++;
+   ```
+| x     |
+|-------|
+| ~~1~~ |
+| ~~2~~ |
+| 3     |
+
+y = $3^6$ (6 times we are mulitplying 3 with itself)
+x = 7 (x = 1 and there are 6 elemts [ 6 increments] )
+
 6. Decrement
 7. Shortcut
 8. Ternary
