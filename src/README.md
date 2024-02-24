@@ -7,6 +7,7 @@ This is to document my progress and to share my learnings with others who may fi
 
 ## Table of Contents
 - [C](./Learning-C/Introduction.md)
+- [Rust](./Learning-Rust/Introduction.md)
 
 [//]: # (- [Python]&#40;./learning-python-index.md&#41;)
 [//]: # (- [Java]&#40;#java&#41;)
