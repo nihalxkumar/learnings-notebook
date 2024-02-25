@@ -38,14 +38,14 @@
 
 High-Level Languages -> Character User Interface
 
-### Fourth Generation languages
+## Fourth Generation languages
 
 - Aimed to have minimum input and maximum output.
 - Examples: Visual Basic (VB), SQL, etc.
 - Time is saved because of shorter input, but it takes more memory, 
 making it less efficient than High-Level Languages.
 
-### Fifth Generation Languages
+## Fifth Generation Languages
 
 - Designed for AI.
 - Examples: LISP, PROLOG.
