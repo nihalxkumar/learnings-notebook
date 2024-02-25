@@ -7,130 +7,65 @@ In the expression `z = x + y`, `z`, `x`, and `y` are operands, while `=` and `+`
 ## Operators Based on the Number of Operands
 
 1. **Unary**
-   - 1 operand
-   - Examples: `x++`, `++x`, `+x`, `-x`
+    - 1 operand
+    - Examples: `x++`, `++x`, `+x`, `-x`
 
 2. **Binary**
-   - 2 operands
-   - Examples: `x + y`, `x - y`, `x! = y`, `x==y`
+    - 2 operands
+    - Examples: `x + y`, `x - y`, `x! = y`, `x==y`
 
 3. **Ternary**
-   - 3 operands
-   - Only one operator: `?:`
+    - 3 operands
+    - Only one operator: `?:`
 
 ## Operators on basis of functions
 
-1. Arithmetic
+1. [Arithmetic](Operators_Arithmetic.md)
+2. [Assignment](Operators_Assignment.md)
+3. [Relational](Operators_Relational.md)
+4. [Logical](Operators_Logical.md)
+5. [Increment](Operators_Increment.md)
+6. [Decrement](Operators_Decrement.md)
+7. [Shorthand](Operators_Shorthand.md)
+8. [Ternary](Operators_Ternary)
+9. [Size of operator](Operators_Sizeof.md)
+10. [Miscellaneous](Operators_Misc)
 
-   `+`, `-`, `*`, `/` (quotient operator), `%` (remainder operator or modulus)
+### General order of Precedence from high to low:
 
-   > in $n/d$ if $n< d$ then output is $0$
-   > 
-   > in $n \% d$ if $n<d$ then output is $n$
+1. Postfix operators (all have the same precedence, so sequences of operators will be evaluated left-to-right)
+    - array subscript operator`[]`
+    - function call operator`()`
+    - component selection operators`.`and`->`
+    - postfix`++`and`--`
+2. Unary operators (all have the same precedence, so sequences of operators will be evaluated left-to-right)
+    - prefix`++`and`--`
+    - `sizeof`
+    - bitwise negation operator`~`
+    - logical negation operator`!`
+    - unary sign operators`-`and`+`
+    - address-of operator`&`
+    - dereference operator`*`
+3. Cast expressions`(`_type name_`)`
+4. Multiplicative operators`*`,`/`,`%`
+5. Additive operators`+`and`-`
+6. Shift operators`<<`and`>>`
+7. Relational operators`<`,`>`,`<=`,`>=`
+8. Equality operators`==`and`!=`
+9. Bitwise AND`&`
+10. Bitwise XOR`^`
+11. Bitwise OR`|`
+12. Logical AND`&&`
+13. Logical OR`||`
+14. Conditional operator`?:`
+15. Assignment operators`=`,`+=`.`-=`,`*=`,`/=`,`%=`,`<<=`,`>>=`,`&=`,`^=`,`|=`
+16. Sequential (comma) operator`,`
 
-   Rules for arithmetic operators:-
-    - int/int is always int
-    - Modulus operator cannot be used with floating point numbers as by default every float is treated as double. C is an expanding language.  `5.2%2` => Error
+So, expressions like`*x++`are parsed as`*(x++)`, since the postfix`++`has higher precedence than the unary`*`.
 
-   If more than 1 operator is present in an expression then precedence rule will be applied. 
+Similarly,`sizeof x + 1`is parsed as`(sizeof x) + 1`, since`sizeof`has higher precedence than addition.
 
-   PEMDAS stands for Parentheses, Exponents, Multiplication and Division (left to right), and Addition and Subtraction (left to right
-   
-   - Operations inside parentheses are performed first.
-   
-   - Multiplication and division have higher precedence than addition and subtraction.
+An expression like`p++->x`is parsed as`(p++)->x`; both postfix`++`and`->`operators have the same precedence, so they're
+parsed from left to right.
 
-   - If multiple operations with the same precedence appear, they are typically performed from left to right.
-
-2. Assignment
-    - `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `<<=`, `>>=`, `&=`, `^=`, `|=`
-    - 2 types of assignment
-        - Simple
-        - Compound
-   
-   Rules for assignment operators
-     1. Single variable is allowed in LHS of assignment operator
-     2. Cascading of assignment operator
-         - `int x=y=z=2;`
-             - Associativity of assignment operator is from Right to Left
-         - `x = 5` `y = 2` Swap values without introducing a third variable
-        ```C
-          x = x + y; // x = 5 + 2 => 7
-          y = x - y; // y = 7 - 2 => 5
-          x = x - y; // x = 7 - 5 => 2
-        ```
-        There are many ways
-        ```C
-        x = x * y; // x = 10
-        y = x / y; // y = 10/2 => 5
-        x = x / y; // x = 10/5 => 2
-        ```
-
-3. Relational
-
-- `>`, `<`, `>=`, `<=`, `==`, `!=`
-- for True comparisons the output will be 1.
-- associativity of relation is Left to Right
-- Precedence of arithmetic is more than of Relational
-```C
-int a = 5, b = 2, c = 1, d;
-d = c + a > b;
-// (c + a) > b
-// (1 + 5) > b
-// 6 > 2
-// True hence 1
-```
-
- > here is the general order from high to low:
-
-    1. Postfix operators (all have the same precedence, so sequences of operators will be evaluated left-to-right)
-            - array subscript operator `[]`
-            - function call operator `()`
-            - component selection operators `.` and `->`
-            - postfix `++` and `--`
-    2. Unary operators (all have the same precedence, so sequences of operators will be evaluated left-to-right)
-      - prefix `++` and `--`
-      - `sizeof`
-      - bitwise negation operator `~`
-      - logical negation operator `!`
-      - unary sign operators `-` and `+`
-      - address-of operator `&`
-      - dereference operator `*`
-    3. Cast expressions `(` _type name_ `)`
-    4. Multiplicative operators `*`, `/`, `%`
-    5. Additive operators `+` and `-`
-    6. Shift operators `<<` and `>>`
-    7. Relational operators `<`, `>`, `<=`, `>=`
-    8. Equality operators `==` and `!=`
-    9. Bitwise AND `&`
-    10. Bitwise XOR `^`
-    11. Bitwise OR `|`
-    12. Logical AND `&&`
-    13. Logical OR `||`
-    14. Conditional operator `?:`
-    15. Assignment operators `=`, `+=`. `-=`, `*=`, `/=`, `%=`, `<<=`, `>>=`, `&=`, `^=`, `|=`
-    16. Sequential (comma) operator `,`
-      
-    So, expressions like `*x++` are parsed as `*(x++)`, since the postfix `++` has higher precedence than the unary `*`. 
-    Similarly, `sizeof x + 1` is parsed as `(sizeof x) + 1`, since `sizeof` has higher precedence than addition.
-    An expression like `p++->x` is parsed as `(p++)->x`; both postfix `++` and `->` operators have the same precedence, so they're parsed from left to right.
-     
-    This is about as short as shortcuts get; when in doubt, use parentheses.
-
-4. Logical
- - Not
-     - exclamation !
- - AND
-     - Double ampersand &&
- - OR
-   - Double piped ||
-   - Short-circuiting
-   > Short-circuiting refers to a feature of logical operators in programming languages that prevents unnecessary computation when the result of an expression becomes determinable based on earlier parts of the expression. Specifically, for the `OR` operator (`||`), short-circuiting means that once a true value is found among the operands, the entire expression returns true without evaluating subsequent operands. Conversely, for the `AND` operator (`&&`), short-circuiting means that once a false value is found among the operands, the entire expression returns false without evaluating subsequent operands
- - Any non-zero value in case of C is considered as True
- - Order of precedence NOT -> AND -> OR
-5. Increment
-6. Decrement
-7. Shortcut
-8. Ternary
-9. Type Casting
-10. Size of operator
+When in doubt, use parentheses.
