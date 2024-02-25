@@ -9,6 +9,16 @@
 - [Variables](./Learning-C/Vairables.md)
 - [Datatypes](./Learning-C/Datatypes.md)
 - [Operators](./Learning-C/Operators.md)
+  - [Arithmetic](./Learning-C/Operators_Arithmetic.md)
+  - [Assignment](./Learning-C/Operators_Assignment.md)
+  - [Relational](./Learning-C/Operators_Relational.md)
+  - [Logical](./Learning-C/Operators_Logical.md)
+  - [Increment](./Learning-C/Operators_Increment.md)
+  - [Decrement](./Learning-C/Operators_Decrement.md)
+  - [Shorthand](./Learning-C/Operators_Shorthand.md)
+  - [Ternary](./Learning-C/Operators_Ternary)
+  - [Type Casting](./Learning-C/Operators_Misc)
+  - [Size of operator](./Learning-C/Operators_Sizeof.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---
