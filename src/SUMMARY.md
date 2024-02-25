@@ -16,9 +16,9 @@
   - [Increment](./Learning-C/Operators_Increment.md)
   - [Decrement](./Learning-C/Operators_Decrement.md)
   - [Shorthand](./Learning-C/Operators_Shorthand.md)
-  - [Ternary](./Learning-C/Operators_Ternary)
-  - [Type Casting](./Learning-C/Operators_Misc)
+  - [Ternary](./Learning-C/Operators_Ternary.md)
   - [Size of operator](./Learning-C/Operators_Sizeof.md)
+  - [Miscellaneous](./Learning-C/Operators_Misc.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---
