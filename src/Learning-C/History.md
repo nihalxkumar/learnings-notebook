@@ -1,8 +1,8 @@
-## History of Languages
+# History of Languages
 
-### Low Level languages
+## Low Level languages
 
-#### Machine Language or Binary Language
+### Machine Language or Binary Language
 - Consists of 0s and 1s.
 - Computers can only understand binary.
     - Unambiguous, simple, and easy to build.
@@ -11,7 +11,7 @@
     - Machine-dependent due to differences in code architecture.
 
 
-#### Assembly Language
+### Assembly Language
 - Uses mnemonics like `ADD`, `SUB`, `MUL`.
 - Operands are represented in binaries.
 - Language translators (Assemblers) were built to make computers understand mnemonics.
