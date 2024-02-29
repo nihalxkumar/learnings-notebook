@@ -6,7 +6,6 @@ src = "src"
 title = "Learnings"
 description = "This is to document my progress and to share my learnings with others who may find them helpful."
 
-
 [output.html]
 default-theme = "rust"
 preferred-dark-theme = "ayu"
@@ -15,6 +14,7 @@ mathjax-support = true
 git-repository-url = "https://github.com/nihalxkumar/learnings-notebook"
 git-repository-icon = "fa-github"
 edit-url-template = "https://github.com/nihalxkumar/learnings-notebook/edit/main/{path}"
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
 [output.html.search]
 enable = true
@@ -45,3 +45,6 @@ runnable = true
 
 [preprocessor.katex]
 after = ["links"]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
