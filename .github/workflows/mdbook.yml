@@ -34,6 +34,7 @@ jobs:
           cargo install --version ${MDBOOK_VERSION} mdbook
           cargo install mdbook-katex
           cargo install mdbook-mermaid
+          mdbook-mermaid install ./book
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
