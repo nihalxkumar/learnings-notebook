@@ -36,3 +36,75 @@ int main() {
 ```
 
 > Unlike if-else statements, switch statements can only be used with integral types (char, int, enum). No variables. Each case label must be a constant expression (integer constants, character constants, or enumerated constants).
+
+---
+
+### Logic building theoretical knowledge
+
+#### Example 1:
+
+```C
+#include <stdio.h>
+
+char x = 'a'
+switch (x) {
+// 97
+case 'a':
+// 97 OR
+case 'e':
+case 'i':
+case 'o':
+case 'u':
+printf("vowel");
+break;
+default:
+printf("not vowel");
+}
+// the expression became 97 OR which will result shortcuiting in TRUE -> 1 -> case 1 -> 97 compared to 1 -> Not Vowel
+```
+
+#### Example 2: Using switch to print grade of a student based on marks:
+
+61-70 -> D
+
+71-80 -> C
+
+81-90 -> B
+
+91-100 -> A
+
+```C
+if(x%10 == 0)
+x --;
+switch(marks/10)
+{
+    case 6:
+    printf("D");
+    break;
+    case 7:
+    printf("C");
+    break;
+    case 8:
+    printf("B");
+    break;
+    case 9:
+    printf("A");
+    break;
+    default:
+    printf("invalid");
+}
+```
+
+
+#### Example 3: 
+
+You can not put `case 'a'` and `case  '97'` together. It will result in a duplicate case error. 
+
+---
+
+
+| Else if ladder | Switch                  |
+| -------------- | ----------------------- |
+| no break       | break required          |
+| any condition  | only equality condition |
+| any data type  | only character constant |
