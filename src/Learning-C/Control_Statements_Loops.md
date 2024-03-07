@@ -40,6 +40,7 @@ Any or all of the initialization, condition, and update statements can be omitte
 for (initialization; condition; update) {
     // code to be executed
 }
+```
 
 ```C
 #include <stdio.h>
