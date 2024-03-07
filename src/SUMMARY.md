@@ -24,6 +24,8 @@
     - [If-else](./Learning-C/Control_Statements_If-else.md)
     - [Switch](./Learning-C/Control_Statements_Switch.md)
     - [Loops](./Learning-C/Control_Statements_Loops.md)
+    - [Break and Continue](./Learning-C/Break_Continue.md)
+    - [Goto](./Learning-C/Control_Statements_Goto.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---
