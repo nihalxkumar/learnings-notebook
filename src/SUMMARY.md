@@ -26,6 +26,7 @@
     - [Loops](./Learning-C/Control_Statements_Loops.md)
     - [Break and Continue](./Learning-C/Break_Continue.md)
     - [Goto](./Learning-C/Control_Statements_Goto.md)
+- [Patterns](./Learning-C/Control_Statements_Patterns.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---
