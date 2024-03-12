@@ -9,7 +9,9 @@ Control Structures are of 3 types:
     - The statements are executed in the order they appear.
 - Conditional
     - The statements are executed based on a condition.
-    - [If-else](./Control_Statements_If-else.md)
-    - [Switch](./Control_Statements_Switch.md)
+    - [If-else](./If-else.md)
+    - [Switch](./Switch.md)
+    - [Break and Continue](./Break-Continue.md)
+    - [Goto](./Goto.md)
 - Iterative
     - [Loops](./Control_Statements_Loops.md)

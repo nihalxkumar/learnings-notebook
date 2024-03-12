@@ -20,16 +20,16 @@ In the expression `z = x + y`, `z`, `x`, and `y` are operands, while `=` and `+`
 
 ## Operators on basis of functions
 
-1. [Arithmetic](Operators_Arithmetic.md)
-2. [Assignment](Operators_Assignment.md)
-3. [Relational](Operators_Relational.md)
-4. [Logical](Operators_Logical.md)
-5. [Increment](Operators_Increment.md)
-6. [Decrement](Operators_Decrement.md)
-7. [Shorthand](Operators_Shorthand.md)
-8. [Ternary](Operators_Ternary)
-9. [Size of operator](Operators_Sizeof.md)
-10. [Miscellaneous](Operators_Misc)
+1. [Arithmetic](./Arithmetic.md)
+2. [Assignment](./Assignment.md)
+3. [Relational](./Relational.md)
+4. [Logical](./Logical.md)
+5. [Increment](./Increment.md)
+6. [Decrement](./Decrement.md)
+7. [Shorthand](./Shorthand.md)
+8. [Ternary](./Ternary)
+9. [Size of operator](./Sizeof.md)
+10. [Miscellaneous](./Misc)
 
 ### General order of Precedence from high to low:
 
