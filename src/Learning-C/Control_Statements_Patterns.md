@@ -1,5 +1,5 @@
-* Count the number of lines and loops for the same
-* Find relation between line number, number of characters and spaces in that line. Apply loop for the same.
+1. Count the number of lines and loops for the same
+2. Find relation between line number, number of characters and spaces in that line. Apply loop for the same.
 
 
 ```
@@ -61,6 +61,7 @@ for (l = 1; l <= 4; l++){
 ```
 <details>
 <summary>Code</summary>
+
 ```C
 for (l = 1; l <= 7; l++)
 {
@@ -215,7 +216,7 @@ for (l = 1; l <= 4; l++){
 
 -->
 
-<!--
+
 ```
 abcdefgfedcba
 abcdef fedcba
@@ -229,33 +230,35 @@ a           a
 <details>
 <summary>Code</summary>
 
-```C    
+```C  
+  
 #include <stdio.h>
 
-int main() {
-    int end = 5; s1 = 2;
-    char end = 'g';
+int main(){
+    int l, s, s1 = -2 ;
+    char ch, ch1, end = 'g';
 
-    for (l = 1; l <= end; c++){
-        for( ch = 'a', l <= end; ch++){
+    for (l = 1; l <= end; ch++){
+        for(ch = 'a'; l <= end; ch++;){
             printf("%c", ch);
         }
         for(s = 0; s <= s1; s++){
             printf(" ");
+            s1 += 2;
         }
-        s1 += 2;
-        for(l == 1){
-            c--;
+        
+        if(l == 1){
+            end--;
         }
-        for(ch1 = ch-1, c >= 'a'; ch1--){
+        for(ch1 = ch-1; ch1 >= 'a'; ch1--;){
             printf("%c", ch1);
+
         }
-        end--;
         printf("\n");
     }
+}
 ```
 
 </details> 
 
--->
 
