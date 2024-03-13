@@ -27,7 +27,7 @@
     - [Break and Continue](./Learning-C/Control_Statements/Break-Continue.md)
     - [Goto](./Learning-C/Control_Statements/Goto.md)
 - [Patterns](./Learning-C/Patterns.md)
-- [Arrays](./Learning-C/Arrays/2D-Arrays.md)
+- [Arrays](./Learning-C/Arrays/arrays.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---
