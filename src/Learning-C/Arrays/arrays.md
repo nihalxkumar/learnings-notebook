@@ -64,3 +64,44 @@ memset(scores, 0, 100*sizeof(int));
 ### Accessing Elements
 
 Elements in an array are accessed using square brackets `[]` notation with the index of the element. Arrays in C are zero-indexed, meaning the index of the first element is 0, and the index of the last element is `array_size - 1`. For example, to access the first and last elements of an array `x`:
+
+---
+
+#### A program which inputs positive integers and converts them into binary using arrays
+
+```C
+int n, i, j;
+int x[16];
+printf("Enter a positive integer: ");
+scanf("%d", &n);
+
+while(n!=0){
+    x[i] = n%2;
+    n = n/2;
+    i++;
+}
+printf("Binary: ");
+
+for(j=i-1; j>=0; j--){
+    printf("%d", binary[j]);
+}
+```
+
+doing the same without using arrays
+
+```C
+// using pow function 
+#include <math.h>
+int n, i=0, x, s=0
+printf("Enter a positive integer: ");
+scanf("%d", &n);
+
+while(n!=0){
+    x = n%2;
+    n = n/2;
+    s = s + pow(10, i)*x;
+    i++;
+}
+printf("Binary: %d", s);
+```
+
