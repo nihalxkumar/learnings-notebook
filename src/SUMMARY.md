@@ -28,6 +28,10 @@
     - [Goto](./Learning-C/Control_Statements/Goto.md)
 - [Patterns](./Learning-C/Patterns.md)
 - [Arrays](./Learning-C/Arrays/arrays.md)
+- [Strings](./Learning-C/Strings.md)
+- [Functions](./Learning-C/Functions/Functions.md)
+- [Recursion](./Learning-C/Recursion/introduction.md)
+    - [Problems](./Learning-C/Recursion/problems.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---
