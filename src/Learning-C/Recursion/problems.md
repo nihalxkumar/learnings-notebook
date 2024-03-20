@@ -96,17 +96,6 @@ Here, Each node represents a call to the fib function with the corresponding par
 ![printing number from n to 1](img1.png)
 
 
-```C
- 9| void fn(int n)
-10|{
-11|    if (n > 0)
-12|    {
-13|        printf("%d", n);
-14|        fn(n - 1);
-15|        printf("%d", n);
-16|    }
-17|};
-```
 
 
 ```C
@@ -134,13 +123,13 @@ void fn(int n)
 {
     int i = 0;
     if(n > 1)
-    f(n-1)
+    fn(n-1)
     for(i=0; i<n; i++)
     printf("*");
     printf("\n");
 }
 void main(){
-    f(4)
+    fn(4)
 }
 ```
 
