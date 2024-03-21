@@ -33,6 +33,7 @@
 - [Recursion](./Learning-C/Recursion/introduction.md)
     - [Problems](./Learning-C/Recursion/problems.md)
 - [Storage Classes](./Learning-C/Storage-Classes/introduction.md)
+- [Preprocessor Directives](./Learning-C/Preprocessor-Directives/introduction.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---
