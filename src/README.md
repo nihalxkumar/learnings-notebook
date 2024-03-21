@@ -22,6 +22,7 @@ This is to document my progress and to share my learnings with others who may fi
 - [Strings](./Learning-C/Strings.md)
 - [Functions](./Learning-C/Functions/Functions.md)
 - [Recursion](./Learning-C/Recursion/introduction.md)
+- [Storage Classes](./Learning-C/Storage-Classes/introduction.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 </details>
