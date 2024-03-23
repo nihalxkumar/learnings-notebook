@@ -1,28 +1,36 @@
 # Arrays
 
-An array in C is a collection of elements of the same data type stored in contiguous memory locations. Each element in an array is accessed by its index. Arrays in C are static, meaning their size is fixed upon declaration and cannot be changed during runtime.
+An array in C is a collection of elements of the same data type stored in contiguous memory locations. Each element in an array is accessed by its index. 
+
+Arrays in C are static, meaning their size is fixed upon declaration and cannot be changed during runtime.
+
+Arrays in C do not support heterogeneous data storage. As such, we cannot store different values of different datatypes in an array.
 
 Elements can be inputted in both row major and column major but stored only in row major fashion.
 
+## Importantce of Arrays
+
+* Easier storage, access and data management
+* Useful to perform matrix operations
+* useful to implement other data structures
+
 ### Declaration
 
-data_type array_name[array_size];
+```C
+datatype array_name[array_size];
+```
 
-with `int x[100]` an array of 100 integers is created.
+```C
+int x[100];
+```
 
-`int` is the data type of the array.
-
-`x` is the name of the array.
-
-`100` is the size or number of elements of the array.
+with `int x[100];` an array of 100 integers is created.
 
 x[0] is the first variable and x[99] is the last element.
 
-The variable's value is called subscript. For x[0] and x[5] the subscript is 0 and 5 respectively.
+The variable's value is called subscript.
 
 All the variables are independent of each other. Changing one variable does not affect the other.
-
-
 
 `x[100] = {0, 1}` is an array of 100 elements with the first 2 elements initialized to 0 and 1. The rest of the elements are initialized to 0.
 
@@ -37,6 +45,8 @@ x[0] = 5;
 x[1] = 3;
 x[2] = 1;
 ```
+
+or
 
 ```c
 int x[3] = {5, 3, 1};
@@ -64,6 +74,11 @@ memset(scores, 0, 100*sizeof(int));
 ### Accessing Elements
 
 Elements in an array are accessed using square brackets `[]` notation with the index of the element. Arrays in C are zero-indexed, meaning the index of the first element is 0, and the index of the last element is `array_size - 1`. For example, to access the first and last elements of an array `x`:
+
+```C
+int first_element = x[0];
+int last_element = x[99];
+```
 
 ---
 
@@ -105,3 +120,19 @@ while(n!=0){
 printf("Binary: %d", s);
 ```
 
+> #### Wrong Syntax
+> float benchmarks[];
+> 
+> benchmarks = {2.35, 42.30, 60.03, 400.5, 0.001};
+>
+> The compiler has no clue how much space to reserve for our "benchmarks" array based on our first statement, and so even though we are providing all of that info in the very next line, compiler will demand that we provide the array size in the declaration line itself. Furthermore, arrays cannot be assigned values by listing them out using curly braces in any statement other than the declaration itself.
+
+
+### Arguements to Functions
+
+- Ordinary variables are passed by value
+  - Values of the arguments passed are copied into the
+parameters of the function.
+  - Any change made to function parameters is not reflected in the original arguments
+- Arrays are passed by reference
+  - Changes made to the array passed in the called function are retained in the calling function
