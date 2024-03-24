@@ -49,6 +49,13 @@
 
 ---
 
+# Data Structures and Algorithms
+
+- [Selection Sort](./Data_Structures_and_Algorithms/Selection_Sort.md)
+
+---
+
+
 # Learning Python
 
 - [to be updated]()
