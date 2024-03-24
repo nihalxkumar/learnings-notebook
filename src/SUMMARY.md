@@ -34,6 +34,7 @@
     - [Problems](./Learning-C/Recursion/problems.md)
 - [Storage Classes](./Learning-C/Storage-Classes/introduction.md)
 - [Preprocessor Directives](./Learning-C/Preprocessor_Directives/introduction.md)
+- [User Defined Datatypes](./Learning-C/User_Defined_Datatypes/introduction.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---
