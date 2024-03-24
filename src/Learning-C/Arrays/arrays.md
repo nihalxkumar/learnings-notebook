@@ -8,7 +8,7 @@ Arrays in C do not support heterogeneous data storage. As such, we cannot store 
 
 Elements can be inputted in both row major and column major but stored only in row major fashion.
 
-## Importantce of Arrays
+### Importantce of Arrays
 
 * Easier storage, access and data management
 * Useful to perform matrix operations
@@ -20,13 +20,13 @@ Elements can be inputted in both row major and column major but stored only in r
 datatype array_name[array_size];
 ```
 
+For example:
+
 ```C
 int x[100];
 ```
 
-with `int x[100];` an array of 100 integers is created.
-
-x[0] is the first variable and x[99] is the last element.
+In this declaration, an array of 100 integers named x is created. The index x[0] refers to the first element, and x[99] refers to the last element.
 
 The variable's value is called subscript.
 
@@ -64,7 +64,6 @@ for (int i = 0; i < 100; i++) {
 Alternatively, the `memset` function from the `<string.h>` library can be used to set all elements of an array to a specific value, such as 0:
 
 ```C
-// at the top of your source code
 #include <string.h>
 
 int scores[100];
@@ -73,12 +72,27 @@ memset(scores, 0, 100*sizeof(int));
 
 ### Accessing Elements
 
-Elements in an array are accessed using square brackets `[]` notation with the index of the element. Arrays in C are zero-indexed, meaning the index of the first element is 0, and the index of the last element is `array_size - 1`. For example, to access the first and last elements of an array `x`:
+Elements in an array are accessed using square brackets `[]` notation with the index of the element. Arrays in C are zero-indexed, meaning the index of the first element is 0, and the index of the last element is `array_size - 1`. 
+
+For example, to access the first and last elements of an array `x`:
 
 ```C
 int first_element = x[0];
 int last_element = x[99];
 ```
+
+### Arguements to Functions
+
+- Ordinary variables are passed by value
+  - Values of the arguments passed are copied into the
+parameters of the function.
+  - Any change made to function parameters is not reflected in the original arguments
+- Arrays are passed by reference
+  - Changes made to the array passed in the called function are retained in the calling function
+
+## Array Bounds Checking in C
+
+In C, array bounds checking is performed only while writing to arrays, not while reading from them. This design choice prioritizes speed but requires programmers to be cautious about inadvertently accessing invalid memory locations.
 
 ---
 
@@ -126,13 +140,3 @@ printf("Binary: %d", s);
 > benchmarks = {2.35, 42.30, 60.03, 400.5, 0.001};
 >
 > The compiler has no clue how much space to reserve for our "benchmarks" array based on our first statement, and so even though we are providing all of that info in the very next line, compiler will demand that we provide the array size in the declaration line itself. Furthermore, arrays cannot be assigned values by listing them out using curly braces in any statement other than the declaration itself.
-
-
-### Arguements to Functions
-
-- Ordinary variables are passed by value
-  - Values of the arguments passed are copied into the
-parameters of the function.
-  - Any change made to function parameters is not reflected in the original arguments
-- Arrays are passed by reference
-  - Changes made to the array passed in the called function are retained in the calling function
