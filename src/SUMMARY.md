@@ -57,7 +57,7 @@
 
 # Misc
 
-- [History of Programming Languages in context of C](./Misc/History.md)
+- [Brief History of Programming Languages](./Misc/History.md)
 - [Compiler and Interpreter](./Misc/Compiler_Interpreter.md)
 
 # Learning Python
