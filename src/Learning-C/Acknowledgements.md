@@ -1,7 +1,16 @@
 # Acknowledgements
 
-Github Copilot - https://copilot.github.com/
+Professors, BITS Pilani
 
-Perplexity - https://en.wikipedia.org/wiki/Perplexity.ai
+[Github Copilot](https://copilot.github.com/)
 
-Order of Precendence in - https://stackoverflow.com/a/4207087
+[Perplexity](https://en.wikipedia.org/wiki/Perplexity.ai)
+
+[ChatGPT](https://chat.openai.com/)
+
+[John Bode on Stack Overflow](https://stackoverflow.com/a/4207087)
+
+[Endianness blog by Kealan Parr](https://www.freecodecamp.org/news/what-is-endianness-big-endian-vs-little-endian/)
+
+[Programmiz.com](https://www.programiz.com/)
+
