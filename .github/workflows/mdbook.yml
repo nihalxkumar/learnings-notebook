@@ -27,7 +27,7 @@ jobs:
       MDBOOK_VERSION: 0.4.36
     steps:
       - uses: actions/checkout@v4
-      - name: Install mdBook, mdbook-katext and mdbook-mermaid
+      - name: Install mdBook, mdbook-katext, mdbook-mermaid and mdbook-admonish
         run: |
           curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
           rustup update
@@ -35,6 +35,8 @@ jobs:
           cargo install mdbook-katex
           cargo install mdbook-mermaid
           mdbook-mermaid install
+          cargo install mdbook-admonish
+          mdbook-admonish install
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
