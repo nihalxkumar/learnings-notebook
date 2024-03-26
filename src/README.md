@@ -11,7 +11,7 @@ This is to document my progress and to share my learnings with others who may fi
 <summary> C </summary>
 
 - [Introduction](./Learning-C/Introduction.md)
-- [History of Programming Languages in context of C](./Learning-C/History.md)
+- [History of Programming Languages in context of C](./Misc/History.md)
 - [Variables](./Learning-C/Vairables.md)
 - [Datatypes](./Learning-C/Datatypes.md)
 - [Operators](./Learning-C/Operators/Operators.md)
@@ -24,10 +24,10 @@ This is to document my progress and to share my learnings with others who may fi
 - [Recursion](./Learning-C/Recursion/introduction.md)
 - [Storage Classes](./Learning-C/Storage-Classes/introduction.md)
 - [Preprocessor Directives](./Learning-C/Preprocessor_Directives/introduction.md)
+- [User Defined Datatypes](./Learning-C/User_Defined_Datatypes/introduction.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 </details>
-
 
 <details>
 <summary> Learning Rust </summary>
@@ -36,6 +36,23 @@ This is to document my progress and to share my learnings with others who may fi
 - [Match](./Learning-Rust/Match.md)
 - [Traits and Generics](./Learning-Rust/Traits_and_Generics.md)
 - [Acknowledgements](./Learning-Rust/Acknowledgements.md)
+</details>
+
+<details>
+<summary> Data Structures and Algorithms </summary>
+
+- [Selection Sort](./Data_Structures_and_Algorithms/Selection_Sort.md)
+
+</details>
+
+<details>
+<summary> Misc </summary>
+
+- [History of Programming Languages in context of C](./Misc/History.md)
+- [Compiler Interpreter](./Misc/Compiler_Interpreter.md)
+- [Endianness](./Misc/Endianness.md)
+
+<details>
 
 [//]: # (- [Python]&#40;./learning-python-index.md&#41;)
 [//]: # (- [Java]&#40;#java&#41;)
