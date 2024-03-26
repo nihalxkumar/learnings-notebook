@@ -52,7 +52,7 @@ This is to document my progress and to share my learnings with others who may fi
 - [Compiler Interpreter](./Misc/Compiler_Interpreter.md)
 - [Endianness](./Misc/Endianness.md)
 
-<details>
+</details>
 
 [//]: # (- [Python]&#40;./learning-python-index.md&#41;)
 [//]: # (- [Java]&#40;#java&#41;)
