@@ -14,3 +14,5 @@ Professors, BITS Pilani
 
 [Programmiz.com](https://www.programiz.com/)
 
+[Pointers tutorial by OceanO](https://youtu.be/MIL2BK02X8A?si=dsqNyD2fIiDJAx9r)
+

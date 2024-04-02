@@ -36,6 +36,7 @@
 - [Storage Classes](./Learning-C/Storage-Classes/introduction.md)
 - [Preprocessor Directives](./Learning-C/Preprocessor_Directives/introduction.md)
 - [User Defined Datatypes](./Learning-C/User_Defined_Datatypes/introduction.md)
+- [Pointers](./Learning-C/Pointers/introduction.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---
