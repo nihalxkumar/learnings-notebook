@@ -243,6 +243,6 @@ Resources to refer to:
 - [Syntax Explained](https://cdecl.org/)
 - [Syntax Visualized](https://www.dcode.fr/c-declaration-explained)
 - [Binary representations of floating point formats](https://float.exposed)
-- [Ocane's Article on pointers](https://medium.com/@jalal92/just-dereference-the-link-for-the-code-in-the-video-cdfc0c2d9547)
+- [oceanO's Article on pointers](https://medium.com/@jalal92/just-dereference-the-link-for-the-code-in-the-video-cdfc0c2d9547)
 - 
 
