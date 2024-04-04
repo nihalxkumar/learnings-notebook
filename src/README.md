@@ -43,6 +43,7 @@ This is to document my progress and to share my learnings with others who may fi
 <summary> Data Structures and Algorithms </summary>
 
 - [Selection Sort](./Data_Structures_and_Algorithms/Selection_Sort.md)
+- [Memory Allocation](./DataStructuresandAlgorithms/memoryallocations.md)
 
 </details>
 

@@ -53,6 +53,7 @@
 # Data Structures and Algorithms
 
 - [Selection Sort](./DataStructuresandAlgorithms/SelectionSort.md)
+- [Memory Allocation](./DataStructuresandAlgorithms/memoryallocations.md)
 
 ---
 
