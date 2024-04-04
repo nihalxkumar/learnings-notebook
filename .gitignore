@@ -3,6 +3,4 @@ book
 .idea/workspace.xml
 .vscode/settings.json
 .vscode/tasks.json
-mermaid.min.js
-mermaid-init.js
 
