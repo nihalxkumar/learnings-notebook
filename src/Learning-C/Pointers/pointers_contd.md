@@ -149,8 +149,51 @@ Answer: b) char *p1 = 2000;
 Explanation:
 Option a) int *p = 2000; printf("%d", *p); is incorrect because it will result in contents of memory location 2000 and 2001 being printed as an integer.
 
+Q. Imagine p is pointing to an integer. Which of the following expressions would print the contents of the location that p is pointing to and make p point to the next location in memory without modifying any data?
 
+a) printf("%d", *p++);
 
+b) printf("%d", (*p)++);
+
+Answer. `(*p)++` increments the value that the pointer points to, while `*p++`increments the pointer itself to point to the next element.
+
+a. `printf("%d", (*p)++);`
+   1. This first dereferences the pointer p to get the value it points to.
+   2. It then increments that value by 1 (post-increment).
+   3. Finally, it prints the original value (before the increment) using the %d format specifier.
+   4. So, this expression:
+      - Accesses the value pointed to by p
+      - Increments that value by 1
+      - Prints the original, pre-incremented value
+
+b. `printf("%d", *p++);`
+ 1. This first prints the value pointed to by p using the %d format specifier.
+ 2. It then increments the pointer p itself by the size of the type it points to (e.g. if p is a pointer to int, it would increment by 4 bytes).
+ 3. This first prints the value pointed to by p using the %d format specifier.
+ 4. It then increments the pointer p itself by the size of the type it points to (e.g. if p is a pointer to int, it would increment by 4 bytes).
+ 5. So, this expression:
+    - Prints the value pointed to by p
+    - Increments the pointer p to point to the next element in memory
+
+> *(arr + 1) = arr[1]
+> 
+> int *a[5] mean “a” is an array of 5 integer pointers.
+
+```c
+#include <stdio.h>
+
+int main() {
+    int *ptr[3], i , iA[]={5,10,15}, iB[]={1,2,3}, iC[]={2,4,6};
+    ptr[0]=iA; ptr[1]=iB; ptr[2]=iC;
+    for(i=0; i<3 ; i++){
+        printf("iA[%d]: address=%p data=%d", i, ptr[0]+i, *(ptr[0]+i));
+        printf("iB[%d]: address=%p data=%d", i, ptr[0]+i, *(ptr[0]+i));
+        printf("iC[%d]: address=%p data=%d", i, ptr[0]+i, *(ptr[0]+i));
+    }
+
+    return 0;
+}
+```
 -----
 
 Resources to refer to:
