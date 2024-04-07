@@ -194,6 +194,43 @@ int main() {
     return 0;
 }
 ```
+
+## Complex Pointers
+
+Basic order of precedence:-
+
+- These are evaluated on first come first serve basis
+
+1. () and [] Left to right.
+2. * and id, pointer and identifier. Right to Left
+3. Data type lest precedence
+
+
+```C
+int ( *p ) [5]
+3      1    2
+    1.2 1.1
+```
+
+P is a pointer to an array of 5 elements of integer datatype.
+
+
+
+```c
+struct stud{
+    int roll;
+    char dept_code[25];
+    float cgpa;
+} class, *ptr;
+
+struct book{
+    char Name[20];
+    float price;
+    char ISB[30];
+}; struct book b, *br;
+```
+
+
 -----
 
 Resources to refer to:
