@@ -233,7 +233,15 @@ int (*p)()
  3    1 2
 ```
 
-P is a pointer to a function returing integer
+p is a pointer to a function returning an integer
+
+```C
+int **p()
+ 5  432 1
+```
+
+p is a function returning pointer to pointer to integer
+
 
 
 
