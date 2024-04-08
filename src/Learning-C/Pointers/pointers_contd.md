@@ -207,12 +207,33 @@ Basic order of precedence:-
 
 
 ```C
+int *p[5]
+3   1 2
+```
+
+P is an array of 5 pointers to integers
+
+```C
 int ( *p ) [5]
 3      1    2
     1.2 1.1
 ```
 
 P is a pointer to an array of 5 elements of integer datatype.
+
+```C
+int *p()
+ 4   3 2  1
+```
+
+p is a function returing pointer to an integer
+
+```C
+int (*p)()
+ 3    1 2
+```
+
+P is a pointer to a function returing integer
 
 
 
