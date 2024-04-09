@@ -63,37 +63,47 @@ printf("*(p+1): %d\n", *(p+1));
 ```
 
 Answer: The output will have
-memory address of x for p
-memory address of x + 4 bytes for p + 1
-value of x for *p which will be 5
-value of x + 1 for *p + 1 which will be 6
-garbage value for *(p+1) because it is not pointing to any valid memory location.
+
+      memory address of x for p
+
+      memory address of x + 4 bytes for p + 1
+
+      value of x for *p which will be 5
+
+      value of x + 1 for *p + 1 which will be 6
+
+      garbage value for *(p+1) because it is not pointing to any 
+      valid memory location.
 
 
 #### Q. How would you print the content of a memory location 2000?
 Assume int takes 2 bytes and char takes 1 byte.
 
-a) int *p = 2000;
-   printf("%d", *p);
+a) 
+```C
+int *p = 2000;
+printf("%d", *p);
+```
 
-b) char *p1 = 2000;
-    printf("%c", *p1);
+b) 
+```C
+char *p1 = 2000;
+printf("%c", *p1);
+```
 
 c) both
 
 d) none
 
-Answer: b) char *p1 = 2000;
-    printf("%c", *p1);
+Answer: b)
 
-Explanation:
-Option a) int *p = 2000; printf("%d", *p); is incorrect because it will result in contents of memory location 2000 and 2001 being printed as an integer.
+Option a  is incorrect because it will result in contents of memory location 2000 and 2001 being printed as an integer.
 
 #### Q. Imagine p is pointing to an integer. Which of the following expressions would print the contents of the location that p is pointing to and make p point to the next location in memory without modifying any data?
 
-a) printf("%d", *p++);
+a) `printf("%d", *p++);`
 
-b) printf("%d", (*p)++);
+b) `printf("%d", (*p)++);`
 
 Answer. `(*p)++` increments the value that the pointer points to, while `*p++`increments the pointer itself to point to the next element.
 
