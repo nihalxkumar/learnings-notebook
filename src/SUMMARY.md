@@ -38,6 +38,7 @@
 - [User Defined Datatypes](./Learning-C/User_Defined_Datatypes/introduction.md)
 - [Pointers](./Learning-C/Pointers/introduction.md)
   - [Pointers Contd.](./Learning-C/Pointers/pointers_contd.md)
+  - [Practice](./Learning-C/Pointers/practice.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---
