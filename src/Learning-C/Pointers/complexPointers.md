@@ -4,6 +4,7 @@ Rules in order of precedence
 
 1. `()` and `[]`
    - Evaluated left to right
+   - Parentheses that are grouping together multiple parts of a declaration have the highest precedence. Next are the postfix operators () and []
 2. `*` and `id` Name of Pointer or identifier
    - Evaluated right to left
 3. Data Type
@@ -155,3 +156,6 @@ int *((*p)[5])();
 ```
 ![alt text](invalidDeclaration.png)
 
+Extreame case: 
+
+![alt text](image-1.png)
