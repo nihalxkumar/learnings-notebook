@@ -3,9 +3,9 @@
 Rules in order of precedence
 
 1. `()` and `[]`
-   1. Evaluated left to right
+   - Evaluated left to right
 2. `*` and `id` Name of Pointer or identifier
-   1. Evaluated right to left
+   - Evaluated right to left
 3. Data Type
 
 
@@ -31,7 +31,7 @@ int *p[5];
 
 ```C
 int (*p)[5];
-    .2 .1     # paranthesis # 1.1 and 1.2
+    .2 .1     // paranthesis # 1.1 and 1.2
  3    2  1
 // declare p as pointer to array of 5 ints
 ```
