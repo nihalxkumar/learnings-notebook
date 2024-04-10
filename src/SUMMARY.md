@@ -40,6 +40,7 @@
   - [Pointers Contd.](./Learning-C/Pointers/pointers_contd.md)
   - [Practice](./Learning-C/Pointers/practice.md)
   - [Complex Pointers](./Learning-C/Pointers/complexPointers.md)
+  - [Pointers and Functions](./Learning-C/Pointers/pointersAndFunction.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---
