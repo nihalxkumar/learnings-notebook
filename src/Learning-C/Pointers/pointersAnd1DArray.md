@@ -34,19 +34,21 @@ printf("%d",*(x+1));
 5. `printf("%d\n", *(x+1));` - This statement would print the value of the second element of the array x. The x array is implicitly converted to a pointer to its first element, and adding 1 to that pointer advances it to the next element. The * operator is then used to dereference the pointer to the second element, which retrieves the value stored at that memory location.
 
 
-```admonish note title = "Not Allowed"
+```admonish danger title = "Not Allowed"
 x++; or ++x;
 
 x--; or --x;
 ```
 
-```admonish info title = "="
+~~~admonish success title = "Equivalents"
+```C
 x[0] = *x = *(x+0)
 
 x[1] = *(x+1) = *x+1
 
 x[1] = 1[x] = *(1+x)
 ```
+~~~
 
 ```c
 #include <stdio.h>
@@ -115,23 +117,28 @@ Error
 
 8.  `printf("%p\n", &x + 1);`
    
-   - Prints the address of the memory location immediately after the array, which is `0x7ffee1234580`.
+    - Prints the address of the memory location immediately after the array, which is `0x7ffee1234580`.
 
 9.  `printf("%d\n", *x++);`
 
-   - Error. The `x++` operation tries to increment the pointer `x`, but the result of `*x` is an rvalue, not an lvalue. The postfix increment operator `++` requires an lvalue as its operand, which can appear on the left side of an assignment, but the dereference operation `*x` produces an rvalue, which cannot be modified directly."
+    - Error. The `x++` operation tries to increment the pointer `x`, but the result of `*x` is an rvalue, not an lvalue. The postfix increment operator `++` requires an lvalue as its operand, which can appear on the left side of an assignment, but the dereference operation `*x` produces an rvalue, which cannot be modified directly.
 
-> `*x++ != *(x++)` 
+        ~~~admonish danger
 
-10.  `printf("%d\n", (*x)++);`
+        ```C
+        *x++ != *(x++)
+        ```
+        ~~~
+
+10. `printf("%d\n", (*x)++);`
 
     - First dereferences the pointer x to access the second element of the array, and then increments the value of that element. Prints 1 and increments the value as 2.
 
-11.  `printf("%d\n", ++*x);` 
+11. `printf("%d\n", ++*x);` 
     
     - First increments the value of the element (which is now 2), and then prints the new value 3.
 
-12.  `printf("%d\n", *++x);`
+12. `printf("%d\n", *++x);`
 
     - Not possible. Constant pointer.
 
