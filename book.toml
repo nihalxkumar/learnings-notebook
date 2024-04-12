@@ -53,3 +53,10 @@ command = "mdbook-mermaid"
 [preprocessor.admonish]
 command = "mdbook-admonish"
 assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
+on_failure = "bail"
+
+# [preprocessor.admonish.default]
+# collapsible = true
+
+[preprocessor.admonish.renderer.test]
+render_mode = "strip"
