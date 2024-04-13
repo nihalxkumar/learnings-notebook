@@ -50,6 +50,32 @@ x[1] = 1[x] = *(1+x)
 ```
 ~~~
 
+### Passing 1D Array to Function
+
+```c
+#include <stdio.h>
+
+void array(int *p){
+        *p = 10;
+        *(p+1) = 20;
+        p[2] = 3;
+        3[p] = 5;
+}
+
+int main() {
+    int x[4];
+    array(x);
+    
+    return 0;
+}
+```
+
+As in above example, Generally 1D array is passed as call by reference. 
+
+If we pass by value then we would not be able to change the value of array elements.
+
+## Practice Questions
+
 ```c
 #include <stdio.h>
 
@@ -121,7 +147,7 @@ Error
 
 9.  `printf("%d\n", *x++);`
 
-    - Error. The `x++` operation tries to increment the pointer `x`, but the result of `*x` is an rvalue, not an lvalue. The postfix increment operator `++` requires an lvalue as its operand, which can appear on the left side of an assignment, but the dereference operation `*x` produces an rvalue, which cannot be modified directly.
+    - Error. First it will try to solve `x++`. Name of array is a constant pointer to the first element. Increment not possible.
 
         ~~~admonish danger
 
@@ -140,8 +166,92 @@ Error
 
 12. `printf("%d\n", *++x);`
 
-    - Not possible. Constant pointer.
+    - Not possible. Constant pointer. 
+
+<br>
+
+```C
+#include <stdio.h>
+
+void array(int *p){
+    // 6. p pointer created at address 4000 having value 2000
+    printf("%d", *p++); // 7.  print 5 and increment p to 2002
+    print("%d", (*p)++); // 8. print 10 and increment value at 2002 to 11 
+    printf("%d", *++p); // 9. increment p to 2004 and print value at 2004 -> 15
+    printf("%d", ++*p); // 10. increment value at 2004 to 16 and print 16
+    printf("%d", p[-1]) // 11. from 2004 points to 2002 and prints value at 2002 -> 11
+}
+
+int main() {
+    int x[3] = {5, 10, 15};
+    // 1. 3 elements in array let address be 2000, 2002, 2004
+    // of value 5, 10, 15 respectively.
+    printf("%d", *x); // 2. value at 2000 -> 5
+    printf("%d", *(x+1)); //3. value at 2002 -> 10
+    printf("%d", *x++); // 4. Error. 
+    array(x); // 5. control transfer
+    
+    return 0;
+}
+```
+
+### Pointer to an array and An Array of pointers
+
+```C
+#include <stdio.h>
+
+int main() {
+    int (*p)[5];    // Pointer to an array of 5 integers
+    int a[5];
+    int *p1[5];     // Array of 5 pointers to integers
+
+    int x = 5, y = 10;
+
+    p1[1] = &x;
+    p1[2] = &y;
+    *(p1 + 3) = &x;
+    p = &a;
+    sizeof(p);
+    sizeof(p1);
+    p + 1; // p + 10 => 10
+    p1 + 1; // p1 + 2 =>  6002
+    p1 // 6000
+    *p1 // 9000
+    **p1 // 10
+    *(*p1+1) // p1 is 6000. value at 6000 is 9000. 9000 + 1 is 9002.
+    // value at 9002 is junk
+    return 0;
+
+```
+
+![alt text](pointertoarrayArraytopointer.png)
 
 
+```C
+#include <stdio.h>
 
+int main() {
+    
+    int a[0] = {0, 1, 2, 3, 4}
+    int *p[] = {a, a+1, a+2, a+3, a+4};
+    int **ptr = p;
+
+    a, *a // 2000 0 
+    p, *p, **p // 4000 2000 0
+    ptr, *ptr, **ptr // 4000 2000 0
+    // ptr will not print 6000 as ptr is not an array with base address. ptr is a pointer
+
+    ptr++; // 4000 and ptr is now pointing to 4002
+    ptr-p, *ptr-a, **ptr // 1 1 1
+
+    *ptr++; // 2002 and will increment 4002 to 4004
+    ptr-p, *ptr-a, **ptr // 2 2 2
+
+    *++ptr; // will increment 4004 to 4006 and print 4006
+    ptr-p, *ptr-a, **ptr //3 3 3
+
+}
+```
+
+![alt text](./assets/beautifulquestion.png)
 
