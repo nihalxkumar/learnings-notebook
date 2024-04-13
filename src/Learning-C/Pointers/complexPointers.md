@@ -122,7 +122,7 @@ int (*(*p)[5])();
 // to function returning int
 ```
 
-![alt text](*(*p).png)
+![alt text](./assets/*(*p).png)
 
 ```C
 int *(*(*p)(int))[10];
@@ -130,7 +130,7 @@ int *(*(*p)(int))[10];
 // and returning pointer to array of 10 pointers to int
 ```
 
-![alt text](int*(*(*p)(int))[10].png)
+![alt text](./assets/int*(*(*p)(int))[10].png)
 
 
 ```C
@@ -139,7 +139,7 @@ int *(*(*p[5])())();
 // to function returning pointer to int
 ```
 
-![alt text](*(*(*p[5])()).png)
+![alt text](./assets/*(*(*p[5])()).png)
 
 
 ```C
@@ -148,16 +148,16 @@ float(*(*p())[])();
 // to array of pointers to function returning float
 ```
 
-![alt text](float(*(*p())[])().png)
+![alt text](./assets/float(*(*p())[])().png)
 
 ```C
 int *((*p)[5])();
 // invalid declaration
 ```
-![alt text](invalidDeclaration.png)
+![alt text](./assets/invalidDeclaration.png)
 
 Extreame case: 
 
 step by step explanation
 
-![alt text](extreame.png)
+![alt text](./assets/extreame.png)

@@ -205,4 +205,4 @@ int main(){
 }
 ```
 
-![alt text](stack.png)
+![alt text](./assets/stack.png)

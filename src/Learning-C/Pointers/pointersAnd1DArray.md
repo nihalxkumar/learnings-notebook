@@ -224,7 +224,7 @@ int main() {
 
 ```
 
-![alt text](pointertoarrayArraytopointer.png)
+![alt text](./assets/pointertoarrayArraytopointer.png)
 
 
 ```C
