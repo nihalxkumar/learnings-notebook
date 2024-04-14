@@ -42,6 +42,7 @@
   - [Complex Pointers](./Learning-C/Pointers/complexPointers.md)
   - [Pointers and Functions](./Learning-C/Pointers/pointersAndFunction.md)
   - [Pointers and 1D Arrays](./Learning-C/Pointers/pointersAnd1DArrays.md)
+  - [Pointers and 2D Arrays](./Learning-C/Pointers/pointersAnd2DArrays.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---
