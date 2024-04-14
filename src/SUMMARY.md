@@ -41,7 +41,7 @@
   - [Practice](./Learning-C/Pointers/practice.md)
   - [Complex Pointers](./Learning-C/Pointers/complexPointers.md)
   - [Pointers and Functions](./Learning-C/Pointers/pointersAndFunction.md)
-  - [Pointers and 1D Array](./Learning-C/Pointers/pointersAnd1DArray.md)
+  - [Pointers and 1D Arrays](./Learning-C/Pointers/pointersAnd1DArrays.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---

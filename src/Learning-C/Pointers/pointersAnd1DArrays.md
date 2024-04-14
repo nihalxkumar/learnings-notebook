@@ -1,4 +1,4 @@
-# Pointers and 1D Array
+# Pointers and 1D Arrays
 
 ```C
 int a;
