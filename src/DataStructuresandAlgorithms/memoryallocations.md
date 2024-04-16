@@ -1,6 +1,28 @@
 # Memory Allocations
 
-Memory allocation is a process by which computer programs and services are assigned with physical or virtual memory space. The memory allocation is done either before or at the time of program execution. There are two types of memory allocations: 
+Memory allocation is a process by which computer programs and services are assigned with physical or virtual memory space. The memory allocation is done either before or at the time of program execution. 
+
+A memory is divided into 4 different portions:
+
+  1. Stack segment
+  2. Heap segment
+  3. Data segment
+  4. Text segment
+
+#### Stack
+
+- One frame is allocated to each function call
+- Auto (or local) variables defined the frame allocated for a function
+- Storage allocated for each frame is reclaimed when the function call is complete
+
+#### Heap
+
+- Dynamically and explicitly allocated memory
+- It is a large pool of memory in which the program can request memory dynamically at runtime.. Allocated storage is not reclaimed automatically on function return. In heap, the memory is allocated or deallocated without any order.
+- Programmer is responsible for deallocation
+- The memory allocated in a head is accessible globally to all functions.   
+
+There are two types of memory allocations: 
 
   1. Compile-time or Static Memory Allocation
   2. Run-time or Dynamic Memory Allocation
@@ -28,9 +50,6 @@ int main(){
 When allocating memory at run-time, the size of memory can be changed during the execution of the program. The memory is allocated on the heap. 
 
 <!-- > Heaps are based on complete binary trees. This means all levels are filled except possibly the last, which is filled from the left side. Elements are stored in an array using a specific indexing scheme for efficient access to parent and child nodes. Heaps are efficient for priority queues, where elements with higher priorities need to be accessed first. -->
-
-> Heap is the segment of memory where dynamic memory allocation takes place. It is a large pool of memory in which the program can request memory dynamically at runtime. In heap, the memory is allocated or deallocated without any order.
-
 
 ## Dynamic Memory Allocation using malloc() a.k.a Memory Allocation
 
