@@ -2,8 +2,8 @@
 
 Memory allocation is a process by which computer programs and services are assigned with physical or virtual memory space. The memory allocation is done either before or at the time of program execution. There are two types of memory allocations: 
 
-1. Compile-time or Static Memory Allocation
-2. Run-time or Dynamic Memory Allocation
+  1. Compile-time or Static Memory Allocation
+  2. Run-time or Dynamic Memory Allocation
 
 ## Compile-time or Static Memory Allocation
 
