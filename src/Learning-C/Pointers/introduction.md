@@ -183,6 +183,21 @@ The array notation ([]) applies more closely to the variable than the pointer no
 In essence, we've defined 20 of whatever type precedes the array brackets.
 To confirm this, you can print the size of the array.
 
+## Null Pointers
+
+Whenever we declare a pointer, we initialize it with a valid address. If you don't initialize it explicitly, it is initialized to a random value like any other variable. However, dereferencing it now will lead to undefined behavior. It might also lead to a segmentation fault if the user tries to access an inaccessible memory location.
+
+To prevent this undefined behavior, we always try to initialize our variables. For pointers, we have a reserved address 0 that is used to indicate that the pointer is not pointing to anything. This address is called the null pointer. It is defined in many header files, including stdio.h and stdlib.h. 
+
+- Null pointers are used to initialize a pointer when that pointers isn't assigned any valid memory address yet.
+
+- Useful for handling errors when using malloc function
+
+- It is a good practice to perform NULL check before deferencing any pointer to avoid segmentation fault. `if (ptr == NULL) {...}`
+
+
+
+
 
 ## argv[] or **argv 
 
