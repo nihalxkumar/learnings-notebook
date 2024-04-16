@@ -69,4 +69,7 @@ Order of precendence
 - `++*p->y` is same as `++(*(p->y))` and `++(*((*p).y))`
 ```
 
+> structure variables are passed by value just like primitive datatypes(intger, char, float, etc.) The only difference is that the structure name is used instead of the data type name. 
+> arrays are generally passed by reference.
+
 
