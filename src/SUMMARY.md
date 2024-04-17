@@ -44,6 +44,7 @@
   - [Pointers and 1D Arrays](./Learning-C/Pointers/pointersAnd1DArrays.md)
   - [Pointers and 2D Arrays](./Learning-C/Pointers/pointersAnd2DArrays.md)
   - [Pointers and Structures](./Learning-C/Pointers/pointersAndStructures.md)
+- [Misc](./Learning-C/Misc/index.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---
