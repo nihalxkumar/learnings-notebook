@@ -46,6 +46,7 @@
   - [Pointers and Structures](./Learning-C/Pointers/pointersAndStructures.md)
 - [Misc](./Learning-C/Misc/index.md)
   - [Type Conversion](./Learning-C/Misc/typeconversion.md)
+  - [Memory Allocation](./DataStructuresandAlgorithms/memoryallocations.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---
@@ -62,7 +63,6 @@
 # Data Structures and Algorithms
 
 - [Selection Sort](./DataStructuresandAlgorithms/SelectionSort.md)
-- [Memory Allocation](./DataStructuresandAlgorithms/memoryallocations.md)
 
 ---
 
