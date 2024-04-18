@@ -61,6 +61,8 @@ When allocating memory at run-time, the size of memory can be changed during the
 (void* ) malloc (size_t size);
 ```
 
+![alt text](./assets/mallocDiagram.png)
+
 The `malloc()` function takes the number of bytes to be allocated as an argument and returns a pointer to the first byte of the allocated memory. If the memory allocation is successful, the function returns a pointer to the first byte of the allocated memory. If the memory allocation fails, the function returns `NULL`.
 
 Malloc allocates memory without knowing the type of data to be stored in the memory. It is the programmer's responsibility to typecast the pointer to the appropriate type.
