@@ -167,6 +167,32 @@ int main(){
 }
 ```
 
+#### Dynamic 2D Arrays
+
+```C
+int **a;
+
+a = (int **) malloc(3 * sizeof(int *));
+```
+
+The above code block allocates a 2-D array a of 3 rows. Each row is a pointer to an integer. We can allocate memory for each row using the following syntax:
+
+```C
+for (int i = 0; i < 3; i++)
+
+    a[i] = (int *) malloc(2 * sizeof(int));
+```
+
+The above code block allocates memory for each row of the 2-D array. The first row is pointed to by a[0], the second row is pointed to by a[1], and so on. The above code allocates memory for 2 integers in each row.
+
+```C
+a[0] = (int *) malloc(1 * sizeof(int));
+
+a[1] = (int *) malloc(3 * sizeof(int));
+
+a[2] = (int *) malloc(5 * sizeof(int));
+```
+
 ### Dynamic Structures
 
 ```C
