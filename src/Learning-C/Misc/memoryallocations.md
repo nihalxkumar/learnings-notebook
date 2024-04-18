@@ -106,6 +106,65 @@ int main() {
 
 ![alt text](./assets/dynamicArrays.png)
 
+
+Returning Arrays from Functions Solutions:
+
+1. Declare array in the calling function and pass it to the called function.
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+
+void copy(int c[], int n, int d[]){
+    for (int i = 0; i < n; i++){
+        d[i] = c[i]
+        // or *(b+1) = *(a+i);
+    }
+}
+
+int main() {
+    int a[5] = {1, 2, 3,4, 5};
+    int b[5];
+    
+    copy(a, 5, b);
+    
+    for(int i = 0; i < 5; i++){
+        printf("%d\t", b[i]);
+    }
+
+    return 0;
+}
+```
+
+2. Declare a pointer inside the called function, allocate memory and return the pointer to calling function.
+   * Since memory is allocated in the heap, it will also be accessible in the calling function.
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+int *copy(int a[], int n){
+    int *b = (int *) malloc(sizeof(int)*n);
+    for (int i = 0; i < n; i++){
+        b[i] = a[i];
+        // or *(b+1)=*(a+i);
+    }
+    return b;
+}
+
+int main(){
+    int a[5] = {1, 2, 3, 4, 5};
+    int *b;
+    
+    b = copy(a, 5);
+    
+    for (int i = 0; i < 5; i++){
+        printf("%d\t", b[i]);
+    }
+}
+```
+
 ## Dynamic Memory Allocation using calloc() a.k.a Contiguous Allocation
 
 It is different from `malloc()` in two ways:
