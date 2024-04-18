@@ -167,6 +167,69 @@ int main(){
 }
 ```
 
+### Dynamic Structures
+
+```C
+struct student 
+{
+    char roll;
+    int dept_code[25];
+    float cgpa;
+};
+struct student *s;
+s = (struct student *) malloc(sizeof(struct student));
+```
+
+The above code allocates a single structure variable dynamically. The malloc() function returns a void pointer, which we cast to a pointer to a structure of type struct student.
+
+
+Similarly, we can allocate an array of structures dynamically using the following syntax:
+
+```C
+struct student *s_arr;
+s_arr = (struct student *) malloc(10 * sizeof(struct student));
+```
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+struct stud
+{
+    int roll;
+    char dept_code[25];
+    float cgpa;
+};
+int main()
+{
+    struct stud *studArray =
+        (struct stud *)malloc(sizeof(struct stud *) * 10);
+    int i = 0;
+    while (i < 10)
+    {
+        printf("Enter roll no of student %d:", i);
+        scanf("%d", &(studArray[i].roll));
+        printf("Enter dept_code of student %d:", i);
+        scanf("%s", &(studArray[i].dept_code));
+        printf("Enter cgpa of student %d:", i);
+        scanf("%f", &(studArray[i].cgpa));
+        i++;
+    }
+    struct stud temp = studArray[0];
+    i = 1;
+    while (i < 10)
+    {
+        if (temp.cgpa < studArray[i].cgpa)
+            temp = studArray[i];
+        i++;
+    }
+    printf("The roll number of Student with max CGPA is: %d",
+           temp.roll);
+}
+```
+
+
+
+
 ## Dynamic Memory Allocation using calloc() a.k.a Contiguous Allocation
 
 It is different from `malloc()` in two ways:
