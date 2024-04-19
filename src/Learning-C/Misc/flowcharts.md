@@ -1,6 +1,6 @@
 # Flowcharts and Diagrams
 
-Flowcharts are a graphical representation of an algorithm. They are used to represent the flow of control in a program. Flowcharts are made up of different symbols that represent different elements of the program. The symbols are connected by arrows to show the flow of control.
+Flowcharts are a graphical representation of an algorithm. They are used to represent the flow of control in a program.
 
 The algorithms are:
 
@@ -13,6 +13,8 @@ Any structured programming language supports three types of statements (construc
 2. Decision-making: Choosing from many alternative paths
 3. Repetition/Iteration: Executing one or a group of statements in a loop iteratively
 
+Flowcharts are made up of different symbols that represent different elements of the program. The symbols are connected by arrows to show the flow of control.
+
 | Symbol                  | Purpose                     | Description                                                      |
 | ----------------------- | --------------------------- | ---------------------------------------------------------------- |
 | Arrow symbol            | Flow Line                   | Indicates the flow of logic by connecting symbols                |
@@ -24,4 +26,4 @@ Any structured programming language supports three types of statements (construc
 | Circle Downward Pointed | Off page connector          | Used to connect the flowchart on a different page                |
 | Margined Rectangle      | redefined Process/ Function | Represents a group of statements performing one processing task. |
 
-
+![alt text](./assets/flowcharts.png)
