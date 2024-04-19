@@ -49,6 +49,7 @@
   - [Memory Allocation](./Learning-C/Misc/memoryallocations.md)
   - [File Handling](./Learning-C/Misc/fileHandling.md)
 - [Projects](./Learning-C/Projects/index.md)
+  - [Grocery List Management System](./Learning-C/Projects/GroceryList.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---
