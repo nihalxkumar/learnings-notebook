@@ -26,6 +26,7 @@ This is to document my progress and to share my learnings with others who may fi
 - [Preprocessor Directives](./Learning-C/Preprocessor_Directives/introduction.md)
 - [User Defined Datatypes](./Learning-C/User_Defined_Datatypes/introduction.md)
 - [Pointers](./Learning-C/Pointers/introduction.md)
+- [Misc](./Learning-C/Misc/index.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 </details>
