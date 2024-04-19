@@ -48,6 +48,7 @@
   - [Type Conversion](./Learning-C/Misc/typeconversion.md)
   - [Memory Allocation](./Learning-C/Misc/memoryallocations.md)
   - [File Handling](./Learning-C/Misc/fileHandling.md)
+  - [Flowcharts and Diagrams](./Learning-C/Misc/flowcharts.md)
 - [Projects](./Learning-C/Projects/index.md)
   - [Grocery List Management System](./Learning-C/Projects/GroceryList.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
