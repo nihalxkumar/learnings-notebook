@@ -2,6 +2,8 @@
 
 Professors, BITS Pilani
 
+[Amit Sir's YT lectures](https://www.youtube.com/playlist?list=PLC36xJgs4dxG-IqARhc23jYTDMYt7yvZP)
+
 [Github Copilot](https://copilot.github.com/)
 
 [Perplexity](https://en.wikipedia.org/wiki/Perplexity.ai)
