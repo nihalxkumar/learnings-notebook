@@ -48,6 +48,7 @@
   - [Type Conversion](./Learning-C/Misc/typeconversion.md)
   - [Memory Allocation](./Learning-C/Misc/memoryallocations.md)
   - [File Handling](./Learning-C/Misc/fileHandling.md)
+- [Projects](./Learning-C/Projects/index.md)
 - [Acknowledgements](./Learning-C/Acknowledgements.md)
 
 ---
