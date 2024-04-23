@@ -69,3 +69,31 @@ An expression like`p++->x`is parsed as`(p++)->x`; both postfix`++`and`->`operato
 parsed from left to right.
 
 When in doubt, use parentheses.
+
+### Associativity
+
+Associativity refers to the order in which operators of the same precedence are evaluated in an expression. 
+
+There are two types of associativity: left associativity and right associativity.
+
+1. **Left Associativity**:
+    
+   *   For operators with left associativity, evaluation proceeds from left to right. This means that if multiple operators of the same precedence appear consecutively in an expression, they are evaluated from left to right.
+    
+    ```c
+    int result = 10 - 5 + 2;
+    ```
+    
+    In this expression, both the subtraction (`-`) and addition (`+`) operators have the same precedence. Since they are left-associative, the subtraction operation `10 - 5` is evaluated first, followed by the addition operation `5 + 2`.
+    
+2. **Right Associativity**:
+    
+    *   Conversely, for operators with right associativity, evaluation occurs from right to left. This means that if multiple operators of the same precedence appear consecutively, they are evaluated from right to left.
+    
+    ```c
+    `int result = 2 ^ 3 ^ 2;`
+    ```
+    
+    In this expression, the bitwise XOR operator (`^`) has right associativity. Therefore, the evaluation starts from the rightmost operator `3 ^ 2`, and then the result is XORed with `2`.
+    
+Understanding associativity is crucial for correctly interpreting expressions and determining the order of operations. It helps in writing code that produces the expected results and avoids ambiguity in complex expressions.
