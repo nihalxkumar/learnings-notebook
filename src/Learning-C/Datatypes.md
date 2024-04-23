@@ -14,11 +14,10 @@ Type of data which user wants to store in memory
     - long
         - 4 bytes are allocated. Range $2^{31}$ to $2^{31}-1$
     - short
-- smallest -ve number -32768 ($-2^{15}$)
-- Range $-32768$ to $32767$
+      - smallest -ve number -32768 ($-2^{15}$)
+      - Range $-32768$ to $32767$
 - Generalize nbits $-2^{n-1}$  to $2^{n-1} -1$
-
-  ⭐ bound checking is not present in C
+⭐ bound checking is not present in C
 
 ### float
 
@@ -46,6 +45,7 @@ Type of data which user wants to store in memory
   - Character constant can initialize variable having char data
       - `char x='a';` here `a` is a character constant
       - `char x=a;` here `a` is a variable 
+  - Character constant can be single or double ch long. It can’t be of triple characters.
       
 ### void
 
@@ -57,12 +57,13 @@ Type of data which user wants to store in memory
 - union
 - enum
 
-> C uses extended ASCII code of 8bits.
-> 
-> because of escape sequences:
-> `char x = '97'` = `x = '9`
-> 
-> `char x='ab'` = `x = 'a`
+~~~admonish note
+C uses extended ASCII code of 8bits.
 
-> Character constant can be single or double ch long. It can’t be of triple characters.
- 
+because of escape sequences:
+```c
+char x = 97 // x = 9
+
+char x = 'ab' // `x = 'a`
+``` 
+~~~

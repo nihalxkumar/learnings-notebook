@@ -11,38 +11,44 @@ Memory is allocated for a variable when it is defined, and the size of the alloc
 
 In C, when you assign a value to a variable, you are actually copying the value to the memory location that the variable represents.
 
-
-> When you assign a value to a variable, you are essentially giving that value a name. So, when you write a = b;, you are saying "give the value that b refers to the name a".
+~~~admonish
+When you assign a value to a variable, you are essentially giving that value a name. So, when you write a = b;, you are saying "give the value that b refers to the name a".
 ```C
 int a = 1;
 int b = 2;
 a = b; // This doesn't mean b is assigned to a.
 ```
+~~~
 
 Variables in C are memory locations that hold values. When you assign a value to a variable in C, you are actually copying the value to the memory location that the variable represents.
 
-#### 3 basic terms related to variables
+#### Basic terms related to variables
 
 1. Definition
-    1. means memory allocation. Whenever a variable is defined, memory is allocated for it.
-       For example, in `int x;` 2 bytes are allocated for x.
+   - Allocates memory for a variable
+   - For example, in `int x;` 2 bytes are allocated for x.
 
 2. Declaration
-   1. Means providing information to the compiler about the data type of the variable. 
-   2. For example, in `int x;`, the information is given to the compiler that the data type of x is int.
+   - Means providing information to the compiler about the data type of the variable. 
+   - For example, in `int x;`, the information is given to the compiler that the data type of x is int.
 
-> runtime -> dynamic initialization 
-> 
->compile time -> static initialization
+
+3. Initialization
+   - Assigns an initial value to a variable at the time of declaration.
+   - `data_type variable_name = value;`
+   - For example, `int x = 1;`
+   - Note:
+     - Static initialization happens at compile time.
+     - Dynamic initialization happens at runtime.
 
 ### Define and Declare
 
-| Define | Declare | Possible                                                 |
-|--------|---------|----------------------------------------------------------|
-| - [x]  | - [x]   | Obviously                                                |
-| - [ ]  | - [x]   | Yes possible, you can declare without memory allocations |
-| - [x]  | - [ ]   | Impossible                                               |
-| - [ ]  | - [ ]   | Very nice                                                |
+| Define | Declare | Possible     |
+| ------ | ------- | ------------ |
+| - [x]  | - [x]   | Obviously    |
+| - [ ]  | - [x]   | Possible     |
+| - [x]  | - [ ]   | Not possible |
+| - [ ]  | - [ ]   | Very nice    |
 
 ### Sign bit and range
 

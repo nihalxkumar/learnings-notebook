@@ -1,3 +1,6 @@
+# Patterns
+
+## Key points
 1. Count the number of lines and loops for the same
 2. Find relation between line number, number of characters and spaces in that line. Apply loop for the same.
 
