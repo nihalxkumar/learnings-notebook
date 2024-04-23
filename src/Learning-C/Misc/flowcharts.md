@@ -27,3 +27,5 @@ Flowcharts are made up of different symbols that represent different elements of
 | Margined Rectangle      | redefined Process/ Function | Represents a group of statements performing one processing task. |
 
 ![alt text](./assets/flowcharts.png)
+
+![pow](./assets/pow.png)
