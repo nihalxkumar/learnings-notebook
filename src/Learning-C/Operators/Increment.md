@@ -4,13 +4,14 @@ The increment operator `++` increases the value of the variable by 1.
 
 The increment operator can be used in two ways:
 
-* Pre `++x` first increment then assign.
-* Post `x++` first assign then increment.
+* Pre-increment `++x`: first increment then assign.
+* Post-increment `x++`: first assign then increment.
 
-Both Pre- and post-work the same if you are using it as a single statement. But if you are using it as a part of a
-bigger expression, then it will make a difference.
+Both Pre- and post-work the same if used as a single statement. 
 
-Example 1:
+However, when used as part of a larger expression, they exhibit different behaviors.
+
+### Example 1:
 
 ```C
 int a = 5, b;
@@ -19,7 +20,7 @@ printf("%d %d", a, b);
 // 7 10
 ```
 
-Example 2:
+### Example 2:
 
 ```C
 int a = 5, b;
@@ -43,13 +44,13 @@ expression like here, it will be applied only once, not twice as you might expec
 
 Use pen and paper. make a table of values of a and b at each step.
 
-| a     | b  |
-|-------|----|
-| ~~5~~ | 10 |
-| ~~6~~ |    |
-| 7     |    |
+| a     | b   |
+| ----- | --- |
+| ~~5~~ | 10  |
+| ~~6~~ |     |
+| 7     |     |
 
-Example 3:
+### Example 3:
 
 ```C
 x = 1;
@@ -57,7 +58,7 @@ y = x++ * ++x * x++ * ++x * x++ * x++;
 ```
 
 | x     |
-|-------|
+| ----- |
 | ~~1~~ |
 | ~~2~~ |
 | 3     |
@@ -75,7 +76,7 @@ x = 5++
 //error: lvalue required as increment operand  
 //Build failed
 
-// To correct the code you can use a variable instead of a constant for incrementing
+// To correct the code we can either use a variable instead of a constant for incrementing
 // or assign the result of the increment operation to another variable.
 ```
 
@@ -85,13 +86,14 @@ C.
 The ++ operator is a unary operator that increments the value of a variable by 1, but it cannot be applied to a constant
 like 5.
 
-> L-value error: An L-value in C refers to an expression that can appear on the left side of an assignment operator (=).
-> It represents an object that occupies some identifiable location in memory. An L-value error occurs when you try to
-> assign a value to something that is not a valid storage location, such as a constant or an expression that does not
-> represent a memory location. In the given code, 5 is a constant and cannot be assigned a new value, leading to an
-> L-value error.
+```admonish note title = "L-value error"
+An expression that can appear on the left side of an assignment operator (=).
 
----
+It represents an object that occupies some identifiable location in memory. An L-value error occurs when you try to assign a value to something that is not a valid storage location, such as a constant or an expression that does not
+represent a memory location. 
+
+In the given code, 5 is a constant and cannot be assigned a new value, leading to an L-value error.
+```
 
 ## Associativity of increment operator
 
@@ -105,9 +107,7 @@ printf("%d %d", x, y);
 The increment operator has right-to-left associativity, which means that if multiple increment operators are used in the
 same expression, the rightmost one will be evaluated first.
 
-In the given code, x++ is evaluated first, incrementing the value of x from 5 to 6. Then, ++x is evaluated, incrementing
+In the given code, `x++` is evaluated first, incrementing the value of x from 5 to 6. Then, `++x` is evaluated, incrementing
 the value of x from 6 to 7. Finally, the sum of the incremented values of x (7 and 7) is assigned to y, resulting in y
 being assigned the value 14. The final value of x is 7.
-
----
 
