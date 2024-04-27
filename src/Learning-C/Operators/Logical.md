@@ -42,4 +42,6 @@ Conversely, for the `AND` operator (`&&`), short-circuiting means that once a 
 
 > Any non-zero value in case of C is considered as True
 > 
-> Order of precedence NOT -> AND -> OR
+> Order of precedence:
+> 
+> NOT > AND > OR
