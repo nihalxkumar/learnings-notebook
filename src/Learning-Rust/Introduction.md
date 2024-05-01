@@ -1,6 +1,6 @@
 # Rust 🦀
 
-"Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety."
+"The Rust programming language helps you write faster, more reliable software. High-level ergonomics and low-level control are often at odds in programming language design; Rust challenges that conflict. Through balancing powerful technical capacity and a great developer experience, Rust gives you the option to control low-level details (such as memory usage) without all the hassle traditionally associated with such control."
         - <a href="https://www.rust-lang.org/" target="_blank">Rust Foundation</a>
 
 ### Specialities
@@ -21,14 +21,5 @@
 - Tooling:
     - Generate docs, lint code, auto format
 
-### Industries
-
-- Web3
-- Embedded Software
-- OS
-- Database Internals
-- Robotics
-
-
-
+![Rust Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/2048px-Rust_programming_language_black_logo.svg.png)
 
