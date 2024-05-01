@@ -1,10 +1,30 @@
 # Traits
 
-Traits define similar functionality for different types
+Traits define similar functionality for different types.
 
 It can be used to standardize functionality across multiple different types.
 
 Standardization permits functions to operate on multiple different types. [ Code deduplication ]
+
+```rust, ignore
+trait Move {
+    fn move_to(&self, x: i32, y: i32);
+}
+
+struct Snake;
+impl Move for Snake {
+    fn move_to(&self, x: i32, y: i32) {
+        println!("slither to ({}, {})", x, y);
+    }
+}
+
+struct Horse;
+impl Move for Horse {
+    fn move_to(&self, x: i32, y: i32) {
+        println!("gallop to ({}, {})", x, y);
+    }
+}
+```
 
 ## Generic Functions
 
@@ -16,20 +36,34 @@ Trait is used as function parameter instead of data type. Function depends on ex
 
 Efficient code. Automatically deduces the type of the parameter when new data type is used.
 
-3 types of Generic Syntaxes
+### 3 types of Generic Syntaxes
 
-1. Using impl Trait. 
-   * Any type that implements a trait. Go with this when you have small number of traits and small number of parameters.
+1. First Way
+
+   * Any type that implements a trait. 
+   
+   * Go with this when you have small number of traits and small number of parameters.
+    
     ```rust, ignore
     fn function(param1: impl Trait1, param2: impl Trait2) {
     // code
     }
     ```
+        
+    ```rust, ignore
+    fn make_move(thing: impl Move, x: i32, y: i32)
+    {
+        thing.move_to(x, y);
+    }
+    ```
 
-2. Usual
+2. Second Way
+
    * A generic type `T` is constrained to implement a specific Trait `Trait1` and `U` is contrained to implement `Trait2`.
    The function parameter must be of Type `T` and `U` and the function will only work if the parameters implement the traits.
-    
+
+   * Used only with small number of traits and parameters.
+
    ```rust,ignore
    fn function<T: Trait1, U: Trait2>(param1: T, param2: U){
        // code
@@ -43,9 +77,17 @@ Efficient code. Automatically deduces the type of the parameter when new data ty
     fn make_move<T: Move>(thing: T, x: i32, y: i32) {
     thing.move_to(x, y);
     }
-    ```                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    ```
 
-3. Usual using Where keyword [most preferred]
+    ```rust, ignore
+    fn make_move<T: Move>(thing: T, x: i32, y: i32)
+    {
+        thing.move_to(x, y);
+    }
+    ```
+
+3. Third Way
+
    * A generic type `T` and `U` are used as parameters and then we use the `where` keyword to specify the constraints.
        
    ```rust, ignore
@@ -53,6 +95,8 @@ Efficient code. Automatically deduces the type of the parameter when new data ty
        where
            T: Trait1 + Trait2,
            U: Trait3 + Trait4
+           // type 1 and type 2 must implement Trait1 and Trait2
+           // type 3 and type 4 must implement Trait3 and Trait4
    {
    // code
    }
@@ -65,3 +109,5 @@ Efficient code. Automatically deduces the type of the parameter when new data ty
         thing.move_to(x, y);
     }
     ```  
+
+
