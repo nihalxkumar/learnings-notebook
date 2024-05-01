@@ -7,7 +7,7 @@ Programming languages have undergone a remarkable evolution since the inception 
 ### Machine Language or Binary Language
 - Consists of 0s and 1s.
 - Computers can only understand binary.
-    - Unambiguous, simple, and easy to build.
+    - Unambiguous and simple.
     - Difficult for humans to read and understand.
     - Not suitable for representing complex data structures.
     - Machine-dependent due to differences in code architecture.
@@ -28,7 +28,7 @@ Programming languages have undergone a remarkable evolution since the inception 
   - Compiler
   - Interpreter
 
-High-Level Languages -> Character User Interface
+High-Level Languages ➡️ Character User Interface
 
 ## Fourth Generation languages
 
