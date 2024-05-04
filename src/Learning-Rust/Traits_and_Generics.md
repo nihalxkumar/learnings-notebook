@@ -26,6 +26,8 @@ impl Move for Horse {
 }
 ```
 
+# Generics
+
 ## Generic Functions
 
 Generic functions are functions that can operate on multiple different types.
@@ -109,5 +111,118 @@ Efficient code. Automatically deduces the type of the parameter when new data ty
         thing.move_to(x, y);
     }
     ```  
+
+## Generic Structures
+
+Store data of any type within the structure
+ - may be any type or constrained by traits
+
+Useful when making own data collections
+
+```rust, ignore
+struct Name<T: Trait1 + Trait2, U: Trait3 + Trait4> {
+    field1: T,
+    field2: U
+}
+
+struct Name<T, U>
+where
+    T: Trait1 + Trait2,
+    U: Trait3
+{
+    field1: T,
+    field2: U
+}
+```
+
+#### Example usage with single type
+
+```rust, ignore
+trait Seat {
+    fn show(&self);
+}
+
+struct Ticket<T: Seat> {
+    location: T,
+}
+
+fn tickect_info(ticket: Ticket<AirlineSeat>) {
+    ticket.location.show();
+    // regular non generic fn that accepts a ticket structure as a function parameter.
+    // we always need to specify the type of the ticket. Here, we are using AirlineSeat.
+    // This AirlineSeat is a type that implements the Seat trait.
+}
+
+let airline = Ticket {location: AirlineSeat :: FirstClass};
+tickect_info(airline);
+```
+
+In the above example, `Ticket` struct is <u>generic over any Seat type</u> and the fn `ticket_info` only accepts a `Ticket` struct with a `AirlineSeat` type.
+
+To maximize our usage of this function we can use generics.
+
+```rust, ignore
+trait Seat {
+    fn show(&self);
+}
+
+struct Ticket<T: Seat> {
+    location: T,
+}
+
+fn tickect_info<T: Seat>(ticket: Ticket<T>) {
+    ticket.location.show();
+}
+
+let airline = Ticket {location: AirlineSeat :: FirstClass};
+let concert = Ticket {location: ConcertSeat :: FrontRow};
+tickect_info(airline);
+tickect_info(concert);
+```
+
+- cannot mix generic structures in a single collection
+  - Generic Structures expand to structures of a specific type
+
+### Implementing Traits for Generic Structures
+
+- Generic Implementation
+  - Implements functionality for any type that can be used with the structure
+    - applies to all types that alo implement in the indicated trait.
+
+- Concretee Implementation
+  - Implements functionality for a specific type
+    - only apply to the type indicated in the angle braces
+
+```rust, ignore
+struct Name<T: Trait1 + Trait2, U: Trait3 + Trait4> {
+    field1: T,
+    field2: U
+}
+
+impl<T: Trait1 + Trait2, U: Trait3 + Trait4> Name <T, U> {
+    fn function(&self, arg1: T, arg2: U) {}
+}
+```
+
+or
+
+```rust, ignore
+struct Name<T, U>
+where
+    T: Trait1 + Trait2,
+    U: Trait3
+{
+    field1: T,
+    field2: U
+}
+impl <T, U> Name <T, U>
+where
+    T: Trait1 + Trait2,
+    U: Trait3
+{
+    fn function(&self, arg1: T, arg2: U) {}
+}
+```
+
 
 
