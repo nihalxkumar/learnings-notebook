@@ -60,6 +60,7 @@
 - [Introduction](./Learning-Rust/Introduction.md)
 - [Match](./Learning-Rust/Match.md)
 - [Traits and Generics](./Learning-Rust/Traits_and_Generics.md)
+- [Memory](./Learning-Rust/memory.md)
 - [Acknowledgements](./Learning-Rust/Acknowledgements.md)
 
 ---
