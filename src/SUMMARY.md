@@ -61,6 +61,7 @@
 - [Match](./Learning-Rust/Match.md)
 - [Traits and Generics](./Learning-Rust/Traits_and_Generics.md)
 - [Memory](./Learning-Rust/memory.md)
+- [Trait Objects](./Learning-Rust/trait_objects.md)
 - [Acknowledgements](./Learning-Rust/Acknowledgements.md)
 
 ---
