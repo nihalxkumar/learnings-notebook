@@ -37,4 +37,55 @@ let kb: Box<dyn Clicky> = Box::new(Keyboard); // Boxed Trait Object
 
 ```
 
+### Using trait objects with functions
 
+#### Borrow
+
+```rust, ignore
+fn borrow_clicky(obj : &dyn Clicky){
+    obj.click();
+}
+
+let kb = Keyboard;
+borrow_clicky(&kb);
+```
+
+#### To move trait objects we use Box
+
+```rust, ignore
+fn move_clicky(obj : Box<dyn Clicky>){
+    obj.click();
+}
+
+let kb = Box::new(Keyboard);
+move_clicky(kb);
+```
+
+### Heterogenous Vector
+
+```rust, ignore
+struct Mouse;
+impl Clicky for Mouse {
+  fn click(&self) {
+    println!("Mouse Clicked");
+  }
+}
+
+
+fn make_clicks(clickeys: Vec<Box<dyn Clicky>>){
+    for clicker in clickeys{
+        clicker.click();
+    }
+}
+
+// one way to create a vector of trait objects
+// let kb = Box<dyn Clicky> = Box::new(Keyboard);
+// let mouse = Box<dyn Clicky> = Box::new(Mouse);
+// let clickers = vec![kb, mouse];
+
+let kb = Box::new(Keyboard);
+let mouse = Box::new(Mouse);
+let clickers: Vec<Box<dyn Clicky>> = vec![kb, mouse];
+
+make_clicks(clickers);
+```
