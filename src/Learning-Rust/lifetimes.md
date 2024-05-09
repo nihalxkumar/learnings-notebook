@@ -27,5 +27,18 @@ In the above example, the lifetime of the reference is `'a`. The lifetime of the
 `'static` is a resever keyword. static lifetimes lasts for the entire duration of the program. It is used for string literals.
 
 
+#### Using in function
 
+```rust, ignore
+fn name<'a>(name: &'a Datatype) -> &'a Datatype {}
+```
+
+#### Lifetime annotations indicate that there exists some owned data that:
+  - "Lives at least as long" as the borrowed data
+  - "Outlives or outlasts" the scope of a borrow
+  - "Exists longer than" the scope of a borrow
+
+#### Structures utilizing borrowed data must:
+  - Always be created after the owner was created
+  - Always be destroyed before the owner is destroyed
 
