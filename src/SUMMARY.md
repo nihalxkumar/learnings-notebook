@@ -63,6 +63,7 @@
 - [Memory](./Learning-Rust/memory.md)
 - [Trait Objects](./Learning-Rust/trait_objects.md)
 - [Lifetimes](./Learning-Rust/lifetimes.md)
+- [Custom Errors](./Learning-Rust/CustomErrors.md)
 - [Acknowledgements](./Learning-Rust/Acknowledgements.md)
 
 ---
